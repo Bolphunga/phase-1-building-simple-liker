@@ -4,8 +4,8 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 const hearts = document.querySelectorAll(".like-glyph")
-const errorMsg = document.querySelector("#modal")
-const err = document.querySelector("#modal-message")
+const err = document.querySelector("#modal")
+const errorMsg = document.querySelector("#modal-message")
 
 hearts.forEach(heart => {
   heart.addEventListener("click", () => {
@@ -22,10 +22,10 @@ hearts.forEach(heart => {
      }
     }) 
     .catch(error => {
-      errorMsg.classList.remove('hidden');
-      err.textContent = error
+      err.classList.remove('hidden');
+      errorMsg.textContent = error
       console.log(error)
-      setTimeout(() => errorMsg.classList.add("hidden"), 3000
+      setTimeout(() => err.classList.add("hidden"), 3000
       )
     })  
   
